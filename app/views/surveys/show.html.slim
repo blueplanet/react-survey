@@ -1,0 +1,11 @@
+p#notice = notice
+
+dl.dl-horizontal
+  dt Name
+  dd = @survey.name
+  dt Description
+  dd = @survey.description
+  
+= link_to 'Edit', edit_survey_path(@survey)
+=<> '|'
+= link_to 'Back', surveys_path
