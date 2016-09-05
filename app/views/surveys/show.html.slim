@@ -1,6 +1,6 @@
 p#notice = notice
 
-= react_component 'Survey', name: @survey.name, description: @survey.description
+= react_component 'Survey', survey: @survey.as_json(include: { questions: { include: { choices: { only: :caption } } } })
     
 = link_to 'Edit', edit_survey_path(@survey)
 =<> '|'
